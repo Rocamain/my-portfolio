@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Contact() {
-  return <section>Contact</section>;
+  return <section className="app-container">Contact</section>;
 }

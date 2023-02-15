@@ -1,0 +1,23 @@
+// font
+$font-stack: Helvetica, Arial, sans-serif;
+// background
+
+$background-color-light: wheat;
+$background-color-dark: black;
+
+// text
+
+$text-color-light: gray;
+$text-color-light-secondary: gray;
+$text-color-dark: white;
+
+// svg
+
+$svg-color-dark: white;
+$svg-color-hovered-light: rgb(233, 233, 18, 0.8);
+$svg-color-hovered-dark: rgba(145, 170, 253, 0.8);
+
+// shadow
+
+$drop-shadow-light: drop-shadow(rgb(189, 155, 3) 0px 0px 0.4rem);
+$drop-shadow-dark: drop-shadow(rgb(144, 150, 230) 0px 0px 0.4rem);
