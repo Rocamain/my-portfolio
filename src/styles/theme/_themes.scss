@@ -1,0 +1,20 @@
+@use '../utilities' as *;
+
+$themes: (
+  light: (
+    backgroundColor: $background-color-light,
+    textColor: $text-color-light,
+    buttonTextColor: $text-color-light,
+    hoveredSvgFill: $svg-color-hovered-light,
+    hoveredSvgFilter: $drop-shadow-light,
+    heroImage: url(/src/assets/images/hero.png),
+  ),
+  dark: (
+    backgroundColor: $background-color-dark,
+    textColor: $text-color-dark,
+    buttonTextColor: $text-color-dark,
+    hoveredSvgFill: $svg-color-hovered-dark,
+    hoveredSvgFilter: $drop-shadow-dark,
+    heroImage: url(/src/assets/images/hero_photo_dark.png),
+  ),
+);

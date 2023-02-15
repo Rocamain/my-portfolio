@@ -1,13 +1,13 @@
 import Footer from './Footer';
-import Header from './Header';
+import Header from './Header/Header';
 import { Outlet } from 'react-router-dom';
 
 export default function Body() {
   return (
     <>
-      <Header />
+      <Header className="app-container" />
       <Outlet />
-      <Footer />
+      <Footer className="app-container" />
     </>
   );
 }
