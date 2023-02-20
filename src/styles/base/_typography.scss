@@ -1,0 +1,37 @@
+@use '../utilities' as u;
+
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 0.9;
+  margin-top: 0;
+}
+
+h1 {
+  font-weight: 600;
+  line-height: 0.9;
+  margin-top: 0;
+
+  @include u.breakpoint-min('medium') {
+    font-size: 1.6rem;
+  }
+  @include u.breakpoint-min('large') {
+    font-size: 1.8rem;
+  }
+  @include u.breakpoint-min('xlarge') {
+    font-size: 2rem;
+  }
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.1;
+}
