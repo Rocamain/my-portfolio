@@ -1,7 +1,14 @@
-@use '../base' as *;
+@use '../base/breakpoints' as br;
+@use 'sass:math';
 
-@mixin breakpoint($size) {
-  @media (min-width: map-get($breakpoints, $size)) {
+@mixin breakpoint-min($size) {
+  @media (min-width: map-get(br.$breakpoints-min, $size)) {
     @content;
   }
-} ;
+}
+
+@mixin breakpoint-max($size) {
+  @media (max-width: map-get(br.$breakpoints-max, $size)) {
+    @content;
+  }
+}
