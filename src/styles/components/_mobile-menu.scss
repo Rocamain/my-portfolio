@@ -1,0 +1,51 @@
+@use '../utilities' as u;
+
+.container {
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  @include u.breakpoint-min('medium') {
+    display: none;
+  }
+}
+
+.burger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.36em;
+  height: 2em;
+  margin: auto;
+
+  justify-content: space-between;
+  @include u.breakpoint-min('medium') {
+    display: none;
+  }
+}
+
+.burger__line {
+  transition: 0.25s;
+  width: 2em;
+  height: 0.3rem;
+}
+
+.animate__line_one {
+  transform: translateY(0.8em) rotate(45deg);
+}
+
+.animate__line_two {
+  opacity: 0;
+}
+
+.animate__line_three {
+  transform: translateY(-0.8em) rotate(-45deg);
+}
