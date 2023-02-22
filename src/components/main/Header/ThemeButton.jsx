@@ -10,12 +10,11 @@ export default function ThemeButton() {
   return (
     <IconContext.Provider
       value={{
-        color: isDarkTheme && 'yellow',
-        className: 'global-class-name',
+        color: isDarkTheme && 'var(--dark-highlight)',
         size: '2em',
       }}
     >
-      <div onClick={handleClick}>
+      <div onClick={handleClick} className="theme-button">
         <FaRegLightbulb />
       </div>
     </IconContext.Provider>

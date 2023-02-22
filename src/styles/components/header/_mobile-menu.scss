@@ -1,4 +1,4 @@
-@use '../utilities' as u;
+@use '../../utilities' as u;
 
 .container {
   overflow: hidden;
@@ -7,7 +7,7 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(40px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +33,8 @@
 }
 
 .burger__line {
+  $root: &;
+  background-color: var(--text-color-light);
   transition: 0.25s;
   width: 2em;
   height: 0.3rem;

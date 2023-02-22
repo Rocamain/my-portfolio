@@ -5,9 +5,10 @@ export default function Burger({ toggleShow, show }) {
   const refBurgerLineThree = useRef(null);
 
   useEffect(() => {
-    // show
-    //   ? document.body.classList.remove('no-scroll')
-    //   : document.body.classList.add('no-scroll');
+    show
+      ? document.body.classList.add('no-scroll')
+      : document.body.classList.remove('no-scroll');
+
     const { current: line1 } = refBurgerLineOne;
     const { current: line2 } = refBurgerLineTwo;
     const { current: line3 } = refBurgerLineThree;
