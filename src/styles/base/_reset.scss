@@ -1,3 +1,5 @@
+@use '../utilities/' as u;
+
 @font-face {
   font-family: 'Inter';
   src: url('src/assets/fonts/Inter-Bold.woff2') format('woff2');
@@ -12,12 +14,7 @@ html {
   box-sizing: border-box;
   background-color: var(--background-color-light);
   color: var(--text-color-light);
-  .burger__line {
-    background-color: var(--text-color-light);
-  }
-  .logo__subtitle {
-    color: var(--text-color-light-secondary);
-  }
+
   a,
   a:visited,
   a:active {
@@ -26,24 +23,12 @@ html {
     color: var(--text-color-light);
     letter-spacing: 0.1rem;
   }
-}
-
-html[data-theme='dark'] {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-
-  a,
-  a:visited,
-  a:active {
-    text-decoration: none;
-    color: var(--text-color-dark);
-    white-space: nowrap;
-  }
-  .burger__line {
-    background-color: var(--text-color-dark);
-  }
-  .logo__subtitle {
-    color: var(--text-color-dark-secondary);
+  #hero-image {
+    @include u.breakpoint-max('medium') {
+      background-image: url('src/assets/images//hero-light.png');
+    }
+    content: url(src/assets/images/hero-light.png);
+    shape-outside: url(src/assets/images/hero-light.png);
   }
 }
 

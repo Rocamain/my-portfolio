@@ -1,17 +1,18 @@
 :root {
   // background
   --background-color-light: wheat;
-  --background-color-dark: black;
+  --background-color-dark: rgb(0, 0, 0);
 
   // text
 
-  --text-color-light: black;
-  --text-color-light-secondary: rgb(105, 104, 104);
-  --text-color-dark: white;
-  --text-color-dark-secondary: rgb(197, 194, 194);
+  --text-color-light: rgb(0, 0, 0);
+  --text-color-light-secondary: #504e49;
+  --text-color-dark: rgb(255, 255, 255);
+  --text-color-dark-secondary: rgb(204, 200, 200);
+  --dark-highlight: rgb(255, 255, 0);
 
   //svg
-  --svg-color-dark: white;
+  --svg-color-dark: rgb(255, 255, 255);
   --svg-color-hovered-light: rgb(233, 233, 18, 0.8);
   --svg-color-hovered-dark: rgba(145, 170, 253, 0.8);
 
