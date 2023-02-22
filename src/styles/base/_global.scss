@@ -1,0 +1,51 @@
+@use '../utilities' as u;
+
+// FLEX UTILITY CLASS
+
+.flex_grow {
+  flex: 1;
+}
+
+.flex {
+  $root: &;
+  display: flex;
+
+  &__a_center {
+    display: flex;
+    align-items: center;
+  }
+  &__a_bottom {
+    align-items: flex-end;
+  }
+  &__j_center {
+    display: flex;
+    justify-content: center;
+  }
+  &__j_bottom {
+    justify-content: flex-end;
+  }
+}
+
+@for $i from 1 through 5 {
+  .gap-#{$i} {
+    gap: $i + em;
+  }
+}
+
+section {
+  height: 200px;
+}
+
+// DESKTOP UTILITY CLASS
+
+.desktop {
+  @include u.breakpoint-max('medium') {
+    display: none;
+  }
+}
+
+.touchScreen {
+  @include u.breakpoint-max('medium') {
+    display: none;
+  }
+}
