@@ -32,10 +32,6 @@
   }
 }
 
-section {
-  height: 200px;
-}
-
 // DESKTOP UTILITY CLASS
 
 .desktop {
@@ -48,4 +44,8 @@ section {
   @include u.breakpoint-max('medium') {
     display: none;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

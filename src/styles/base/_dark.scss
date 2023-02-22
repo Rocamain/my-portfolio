@@ -1,0 +1,57 @@
+@use '../utilities/' as u;
+
+html[data-theme='dark'] {
+  box-sizing: border-box;
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+
+  a,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    color: var(--text-color-dark);
+    white-space: nowrap;
+  }
+  p {
+    color: var(--text-color-dark-secondary);
+  }
+  .burger__line {
+    background-color: var(--text-color-dark);
+  }
+  .logo__subtitle {
+    color: var(--text-color-dark-secondary);
+  }
+  .logo__title {
+    color: var(--text-color-dark);
+    font-weight: 700;
+  }
+  #hero-image {
+    @include u.breakpoint-max('medium') {
+      background-image: url('src/assets/images//hero-dark.png');
+    }
+    content: url(src/assets/images/hero-dark.png);
+    shape-outside: 'url(src/assets/images//hero-dark.png)';
+  }
+  .hero-intro__title {
+    color: var(--dark-highlight);
+  }
+  .btn {
+    color: var(--text-color-dark);
+    border-color: var(--text-color-dark);
+    &__active {
+      @extend .btn;
+      color: var(--background-color-dark);
+      background-color: var(--dark-highlight);
+      border-color: var(--dark-highlight);
+    }
+    &:hover {
+      color: var(--text-color-light);
+      border-color: var(--dark-highlight);
+    }
+    &:before {
+      content: '';
+
+      background-color: var(--dark-highlight);
+    }
+  }
+}
