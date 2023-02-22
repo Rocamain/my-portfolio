@@ -5,11 +5,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 10vh;
+  height: 10%;
   padding: 1em 2.5em 1em 1em;
 
   @include u.breakpoint-max('small') {
     padding: 1em 0.5em;
+  }
+
+  @include u.breakpoint-min('large') {
+    max-width: 1400px;
+    margin-inline: auto;
   }
 
   .nav__list {
@@ -45,6 +50,7 @@
     font-size: 1.35rem;
     letter-spacing: 0.05em;
     line-height: 1;
+    color: var(--text-color-light);
     @include u.breakpoint-max('large') {
       font-weight: 600;
       font-size: 1.25rem;
@@ -67,7 +73,10 @@
     }
   }
 }
-
+.theme-button {
+  cursor: pointer;
+  padding: 0.2em;
+}
 nav {
   @include u.breakpoint-max('medium') {
     display: grid;
@@ -77,6 +86,7 @@ nav {
 }
 .nav-link {
   font-size: 1.2rem;
+  padding: 0.6em 0.6em;
   &:hover {
     color: rgba(56, 89, 197, 0.8);
   }
