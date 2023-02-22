@@ -3,10 +3,14 @@ import { NavLink } from 'react-router-dom';
 //  PENDING IMPLEMENTATION OF ACTIVE CLASS
 
 export default function MenuLinks({ handleShow }) {
+  const handleClick = (e) => {
+    e.stopPropagation();
+    handleShow();
+  };
   return (
     <>
       <NavLink
-        onClick={handleShow}
+        onClick={handleClick}
         // className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
         className="nav-link"
         to="/#About"
@@ -15,7 +19,7 @@ export default function MenuLinks({ handleShow }) {
       </NavLink>
 
       <NavLink
-        onClick={handleShow}
+        onClick={handleClick}
         className="nav-link"
         // className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
         to="/#Projects"
@@ -24,7 +28,7 @@ export default function MenuLinks({ handleShow }) {
       </NavLink>
 
       <NavLink
-        onClick={handleShow}
+        onClick={handleClick}
         className="nav-link"
         // className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
         to="/#Contact"
