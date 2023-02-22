@@ -1,11 +1,9 @@
 import MobileMenu from './MobileMenu';
 import DesktopMenu from './DesktopMenu';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 export default function Menu() {
-  return (
-    <div>
-      <MobileMenu />
-      <DesktopMenu />
-    </div>
-  );
+  const matchesDesktop = useMediaQuery();
+
+  return <div>{matchesDesktop ? <DesktopMenu /> : <MobileMenu />}</div>;
 }
