@@ -1,0 +1,59 @@
+@use '../../utilities/' as u;
+#hero-image {
+  height: 600px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  margin-top: 0;
+  transition: 0.65s;
+
+  @include u.breakpoint-min('small') {
+    min-height: 700px;
+    height: 75vh;
+  }
+  @include u.breakpoint-min('medium') {
+    float: left;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    shape-image-threshold: 0.2;
+    shape-margin: 20px;
+    height: 75vh;
+  }
+  @include u.breakpoint-min('large') {
+    height: 85vh;
+  }
+}
+.hero-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-intro {
+  width: 80vw;
+  margin-inline: auto;
+  &__title {
+    color: var(--text-color-light-secondary);
+    font-weight: 900;
+    font-size: 1.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  @include u.breakpoint-min('small') {
+    width: 70vw;
+  }
+  @include u.breakpoint-min('medium') {
+    padding-right: 5vw;
+    width: calc(900px + 5vw);
+    padding-top: 20%;
+  }
+  @include u.breakpoint-min('large') {
+    padding-right: 10vw;
+    width: 1200px;
+  }
+  @include u.breakpoint-min('xlarge') {
+    padding-right: 10vw;
+    width: 1400px;
+  }
+}

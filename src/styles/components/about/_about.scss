@@ -1,0 +1,56 @@
+.btn {
+  cursor: pointer;
+  color: var(--text-color-light);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0.13em solid var(--text-color-light);
+  padding: 0.6em 1.25em;
+  font-size: 1.15rem;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  &__active {
+    @extend .btn;
+    $root: &;
+    color: var(--text-color-dark);
+    background-color: var(--text-color-light);
+    &:hover {
+      background-color: transparent !important;
+    }
+    ::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      top: 0;
+      left: -2.5em;
+      transform: skewX(45deg);
+      background-color: var(--text-color-dark);
+      z-index: -1;
+      transition: all 1s;
+    }
+  }
+}
+
+.btn:hover {
+  color: var(--text-color-dark);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: var(--text-color-light);
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn:hover::before {
+  width: 160%;
+}
