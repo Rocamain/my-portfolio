@@ -1,20 +1,21 @@
 import { FaRegLightbulb } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import { useContext } from 'react';
-// import { ThemeContext } from '../../context/ThemeContext.jsx';
-import { ThemeContext } from '../../../context/ThemeContext';
+import { ThemeContext } from '../../../context/themeContext';
 
 export default function ThemeButton() {
-  const { theme, changeTheme } = useContext(ThemeContext);
+  const { isDarkTheme, changeTheme } = useContext(ThemeContext);
+
+  const handleClick = () => changeTheme();
   return (
     <IconContext.Provider
       value={{
-        color: theme === 'dark' && 'yellow',
+        color: isDarkTheme && 'yellow',
         className: 'global-class-name',
         size: '2em',
       }}
     >
-      <div onClick={changeTheme}>
+      <div onClick={handleClick}>
         <FaRegLightbulb />
       </div>
     </IconContext.Provider>

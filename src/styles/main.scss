@@ -1,12 +1,3 @@
-@use 'base' as *;
-@use 'components' as *;
-@use 'layouts' as *;
-@use 'theme' as *;
-@use 'utilities' as *;
-
-.app-container {
-  @include themify($themes) {
-    color: themed('textColor');
-    background-color: themed('backgroundColor');
-  }
-}
+@forward 'base';
+@forward 'layouts';
+@forward 'components';
