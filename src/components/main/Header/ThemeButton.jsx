@@ -1,22 +1,20 @@
 import { FaRegLightbulb } from 'react-icons/fa';
-import { IconContext } from 'react-icons';
 import { useContext } from 'react';
 import { ThemeContext } from '../../../context/themeContext';
+import IconButton from '../../global/IconButton';
 
-export default function ThemeButton() {
-  const { isDarkTheme, changeTheme } = useContext(ThemeContext);
+export default function ThemeButton(props) {
+  const { changeTheme, isDarkTheme } = useContext(ThemeContext);
 
   const handleClick = () => changeTheme();
   return (
-    <IconContext.Provider
-      value={{
-        color: isDarkTheme && 'var(--dark-highlight)',
-        size: '2em',
-      }}
+    <IconButton
+      onClick={handleClick}
+      className="theme-button"
+      {...props}
+      color={isDarkTheme ? 'var(--dark-highlight)' : undefined}
     >
-      <div onClick={handleClick} className="theme-button">
-        <FaRegLightbulb />
-      </div>
-    </IconContext.Provider>
+      <FaRegLightbulb />
+    </IconButton>
   );
 }

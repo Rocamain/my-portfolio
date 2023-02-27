@@ -6,7 +6,7 @@ export default function Logo() {
   return (
     <div className="flex__a_center gap-1 flex_grow">
       <div>
-        <a href="">
+        <button onClick={() => window.scrollTo(0, 0)}>
           <svg
             width="60"
             height="60"
@@ -40,7 +40,7 @@ export default function Logo() {
             <title>logo</title>
             <desc>Javier Roca logo</desc>
           </svg>
-        </a>
+        </button>
       </div>
       <div>
         <p className="logo__title">Javier Roca</p>

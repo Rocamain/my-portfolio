@@ -1,11 +1,6 @@
 import { motion } from 'framer-motion';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 import HeroIntroduction from './HeroIntroduction';
-const transitionConfig = {
-  type: 'spring',
-  duration: 1.5,
-  bounce: 0.45,
-};
 
 const viewportConfig = {
   once: true,
@@ -13,10 +8,12 @@ const viewportConfig = {
 };
 
 export default function Hero() {
-  const matchDesktop = useMediaQuery();
+  const matchDesktop = useMediaQuery('laptop');
+
   return (
-    <section className={matchDesktop ? 'hero-container' : undefined}>
+    <section className="hero-container">
       <motion.div
+        aria-label="background photo of myself"
         id={!matchDesktop ? 'hero-image' : undefined}
         initial={{ opacity: 0 }}
         viewport={viewportConfig}

@@ -12,8 +12,20 @@ html[data-theme='dark'] {
     color: var(--text-color-dark);
     white-space: nowrap;
   }
+  button {
+    color: var(--text-color-dark);
+  }
   p {
     color: var(--text-color-dark-secondary);
+  }
+  .header {
+    background: linear-gradient(
+      var(--background-color-dark) 0 40%,
+      transparent
+    );
+  }
+  .side-nav {
+    background-color: var(--background-color-dark);
   }
   .burger__line {
     background-color: var(--text-color-dark);
@@ -50,7 +62,6 @@ html[data-theme='dark'] {
     }
     &:before {
       content: '';
-
       background-color: var(--dark-highlight);
     }
   }
