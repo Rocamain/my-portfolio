@@ -20,7 +20,7 @@ export default function MobileMenuPopOver({ show, toggleShow }) {
       whileInView={show ? 'show' : 'hide'}
       transition={{ duration: 0.45 }}
       variants={variants}
-      className="container"
+      className="mobile-menu__container"
       onClick={handleClick}
     >
       <nav>

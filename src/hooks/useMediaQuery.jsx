@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
 
-export default function useMediaQuery() {
+const breakpoints = { pad: '600px', laptop: '900px', desktop: '1440px' };
+
+export default function useMediaQuery(screen) {
+  console.log(screen);
   const [matchMedia, setMatchMedia] = useState(
-    window.matchMedia('(min-width: 900px)').matches
+    window.matchMedia(`(min-width: ${breakpoints[screen]}`).matches
   );
 
   useEffect(() => {
-    const mql = window.matchMedia('(min-width: 900px)');
+    const mql = window.matchMedia(`(min-width: ${breakpoints[screen]})`);
 
     const matchMedia = (event) => {
       if (event.matches) {

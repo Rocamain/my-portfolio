@@ -24,8 +24,11 @@
   }
 }
 .hero-container {
-  display: flex;
-  justify-content: center;
+  overflow-x: hidden;
+  @include u.breakpoint-min('medium') {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .hero-intro {
