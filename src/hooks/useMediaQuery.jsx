@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 const breakpoints = { pad: '600px', laptop: '900px', desktop: '1440px' };
 
 export default function useMediaQuery(screen) {
-  console.log(screen);
   const [matchMedia, setMatchMedia] = useState(
     window.matchMedia(`(min-width: ${breakpoints[screen]}`).matches
   );

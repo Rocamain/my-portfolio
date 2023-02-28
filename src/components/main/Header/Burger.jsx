@@ -26,9 +26,9 @@ export default function Burger({ toggleShow, show }) {
 
   return (
     <div onClick={toggleMenu} className="burger">
-      <div ref={refBurgerLineOne} className="burger__line" />
-      <div ref={refBurgerLineTwo} className="burger__line" />
-      <div ref={refBurgerLineThree} className="burger__line" />
+      <div ref={refBurgerLineOne} className="burger__line background-color" />
+      <div ref={refBurgerLineTwo} className="burger__line background-color" />
+      <div ref={refBurgerLineThree} className="burger__line background-color" />
     </div>
   );
 }

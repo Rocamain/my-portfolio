@@ -25,7 +25,7 @@
 
 .burger__line {
   $root: &;
-  background-color: var(--text-color-light);
+
   transition: 0.25s;
   width: 2em;
   height: 0.3rem;
