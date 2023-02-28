@@ -30,3 +30,55 @@ export const projectsData = [
     tags: ['Node', 'Express', 'Sequelize', 'API', 'Jest'],
   },
 ];
+
+export const skills = [
+  {
+    title: 'HTML5',
+    src: 'src/assets/icons/html-5.png',
+  },
+  {
+    title: 'CSS3',
+    src: 'src/assets/icons/css3.png',
+  },
+  {
+    title: 'SASS',
+    src: 'src/assets/icons/sass.png',
+  },
+  {
+    title: 'Mui',
+    src: 'src/assets/icons/material-ui.svg',
+  },
+  {
+    title: 'JavaScript',
+    src: 'src/assets/icons/javascript.png',
+  },
+  {
+    title: 'React router',
+    dark: 'src/assets/icons/react-router-dark.svg',
+    src: 'src/assets/icons/react-router.svg',
+  },
+  {
+    title: 'Node',
+    dark: 'src/assets/icons/nodejs-dark.svg',
+    src: 'src/assets/icons/nodejs.svg',
+  },
+  {
+    title: 'Express',
+    dark: 'src/assets/icons/expressjs-dark.svg',
+    src: 'src/assets/icons/expressjs.svg',
+  },
+  {
+    title: 'React',
+    src: 'src/assets/icons/react.svg',
+  },
+
+  {
+    title: 'Git & GitHub',
+    dark: 'src/assets/icons/github-dark.svg',
+    src: 'src/assets/icons/github.svg',
+  },
+  {
+    title: 'PostgreSQL',
+    src: 'src/assets/icons/postgresql.png',
+  },
+];
