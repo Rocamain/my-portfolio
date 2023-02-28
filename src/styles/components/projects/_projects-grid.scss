@@ -1,0 +1,145 @@
+@use '../../utilities/mixins' as u;
+
+.projects_grid {
+  display: grid;
+  gap: 3em;
+  .card_container {
+    display: flex;
+    flex-direction: column;
+    &__img {
+      border-radius: 5px;
+      margin-bottom: 1.5em;
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      display: flex;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    &__link {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.8rem;
+    }
+  }
+
+  @include u.breakpoint-min('medium') {
+    grid-template-columns: repeat(4, 1fr);
+    .card_container {
+      grid-column: span 2;
+      &:last-child:nth-child(3) {
+        grid-column-end: 4;
+      }
+    }
+    .card_container__img {
+      &:hover {
+        .tags-container {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  @include u.breakpoint-min('large') {
+    grid-template-columns: repeat(6, 1fr);
+    .card_container {
+      grid-column: span 2;
+      &:last-child:nth-child(3) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+      }
+    }
+  }
+}
+
+.tags-container {
+  align-self: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  width: 90%;
+  margin-inline: auto;
+  padding: 1.5em 0;
+
+  @include u.breakpoint-min('medium') {
+    visibility: hidden;
+  }
+}
+
+.tag {
+  padding: 0.5em 0.8em;
+
+  border-radius: 10px;
+  &.React {
+    color: white;
+    background: #61dafb;
+    border: 2.5px solid #34bbe0;
+  }
+
+  &.Strapi {
+    color: white;
+    background: #f06224;
+    border: 2.5px solid #cc4106;
+  }
+
+  &.Styled {
+    color: white;
+    background: #006bc0;
+    border: 2.5px solid #044b85;
+  }
+  &.API {
+    color: white;
+    background: #bb4310;
+    border: 2.5px solid #f18150;
+  }
+
+  &.JavaScript {
+    color: black;
+    background: #f7e018;
+    border: 2.5px solid #d6c317;
+  }
+
+  &.Mui {
+    color: white;
+    background: #3178c6;
+    border: 2.5px solid #0f61b8;
+  }
+
+  &.Jest {
+    color: white;
+    background: #d95496;
+    border: 2.5px solid #c92f7c;
+  }
+
+  &.React-Router {
+    color: white;
+    background: #787cb5;
+    border: 2.5px solid #565ba1;
+  }
+
+  &.Node {
+    color: white;
+    background: #8ac400;
+    border: 2.5px solid #6a9605;
+  }
+
+  &.PostgresSql {
+    color: white;
+    background: #3178c6;
+    border: 2.5px solid #0f61b8;
+  }
+
+  &.Express {
+    color: white;
+    background: #0c0e11;
+    border: 2.5px solid #415468;
+  }
+
+  &.Sequelize {
+    color: white;
+    background: #8130ce;
+    border: 2.5px solid #281d33;
+  }
+}
