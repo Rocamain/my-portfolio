@@ -1,0 +1,45 @@
+@use '../../utilities/' as u;
+@use '../../base/typography' as *;
+
+.section_title {
+  margin-left: -1em;
+  margin-bottom: 1em;
+  &__border {
+    height: 3px;
+
+    margin: 0;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__title_letter {
+    text-transform: uppercase;
+    @extend h2;
+  }
+
+  @include u.breakpoint-min('medium') {
+    margin: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0;
+    transform: rotate(-90deg);
+    position: relative;
+    left: 1rem;
+    top: 10rem;
+    transform-origin: left;
+    &__title {
+      margin: 0;
+      width: 2rem !important;
+    }
+
+    border-bottom: none;
+    margin: 0;
+    line-height: 100%;
+    text-align: left;
+    width: auto;
+  }
+}

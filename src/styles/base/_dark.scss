@@ -18,6 +18,10 @@ html[data-theme='dark'] {
   p {
     color: var(--text-color-dark-secondary);
   }
+
+  .background-color {
+    background-color: var(--text-color-dark);
+  }
   .header {
     background: linear-gradient(
       var(--background-color-dark) 0 40%,
@@ -26,9 +30,9 @@ html[data-theme='dark'] {
   }
   .side-nav {
     background-color: var(--background-color-dark);
-  }
-  .burger__line {
-    background-color: var(--text-color-dark);
+    @include u.breakpoint-min('medium') {
+      background-color: transparent;
+    }
   }
   .logo__subtitle {
     color: var(--text-color-dark-secondary);
