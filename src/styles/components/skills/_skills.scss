@@ -1,0 +1,17 @@
+.techContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.techContainer div > img {
+  transition: 0.45s;
+  cursor: pointer;
+}
+
+.techContainer div > img:hover {
+  transform: scale(1.25) rotate(5deg);
+}

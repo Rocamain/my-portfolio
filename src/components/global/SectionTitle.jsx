@@ -7,19 +7,20 @@ const viewportConfig = {
   once: true,
 };
 
-export default function SectionTitle({ section }) {
+export default function SectionTitle({ section, noRotate }) {
   const letterArray = Array.from(section);
   return (
     <div>
       <motion.header
         id={section}
-        className="section_title"
+        className={noRotate ? 'section_title-normal' : 'section_title'}
         viewport={viewportConfig}
       >
         <h2
-          className="section_title__title"
+          className={
+            noRotate ? 'section_title-normal__title' : 'section_title__title'
+          }
           aria-label={section}
-          style={{ fontSize: 'inherit' }}
         >
           {letterArray.map((letter, i) => (
             <motion.span
@@ -27,7 +28,11 @@ export default function SectionTitle({ section }) {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ ...transitionConfig, delay: 0.1 * i }}
               key={section + i + letter}
-              className="section_title__title_letter"
+              className={
+                noRotate
+                  ? 'section_title-normal__title_letter'
+                  : 'section_title__title_letter'
+              }
               viewport={viewportConfig}
             >
               {letter}
@@ -35,7 +40,9 @@ export default function SectionTitle({ section }) {
           ))}
         </h2>
         <motion.div
-          className="section_title__border background-color"
+          className={`${
+            noRotate ? 'section_title-normal__border' : 'section_title__border'
+          } background-color`}
           initial={{ opacity: 0, x: -5, width: 0 }}
           whileInView={{ opacity: 1, x: 0, width: '180px' }}
           transition={{ ...transitionConfig, delay: 0.2 }}

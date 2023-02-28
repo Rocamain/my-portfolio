@@ -1,6 +1,25 @@
 @use '../../utilities/' as u;
 @use '../../base/typography' as *;
 
+.section_title-normal {
+  margin-left: -1em;
+  margin-bottom: 3em;
+  &__border {
+    height: 3px;
+
+    margin: 0;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__title_letter {
+    text-transform: uppercase;
+    @extend h2;
+  }
+}
+
 .section_title {
   margin-left: -1em;
   margin-bottom: 1em;
