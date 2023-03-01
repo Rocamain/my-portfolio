@@ -1,0 +1,50 @@
+.contact_container {
+  display: grid;
+  gap: 4em;
+  width: 85vw;
+  padding-top: 5vh;
+}
+.input,
+.textarea {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--text-color-light);
+  width: 100%;
+  caret-color: #8d6603;
+  font-size: 1.15rem;
+  font-weight: 700;
+  height: 50px;
+  padding: 0.4rem;
+
+  &:focus,
+  :focus-visible {
+    outline: none;
+    border-color: #8d6603;
+  }
+
+  &::placeholder {
+    color: inherit;
+    font: inherit;
+    margin: 0 1em;
+    font-weight: 700;
+  }
+}
+
+.textarea {
+  border: 1px solid var(--text-color-light);
+  height: 180px;
+}
+.label {
+  padding: 0.4rem;
+  padding-top: 1em;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.contact_details {
+  &_phone,
+  &_email {
+    font-size: 1.1rem;
+    color: #8d6603;
+  }
+}

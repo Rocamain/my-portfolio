@@ -56,4 +56,9 @@ section {
 
 .background-color {
   background-color: var(--background-color-dark);
+  // border-color: var(--background-color-dark);
+  &:focus {
+    // border-color: var(--svg-color-hovered-dark);
+    // outline: none;
+  }
 }
