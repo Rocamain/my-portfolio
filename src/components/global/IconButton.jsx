@@ -4,6 +4,10 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 export default function IconButton({ children, link, big, color, ...props }) {
   const matchesLaptop = useMediaQuery('laptop');
 
+  const isMail = props?.href?.includes('mailto:');
+
+  if (isMail) {
+  }
   return (
     <IconContext.Provider
       value={{
@@ -13,7 +17,7 @@ export default function IconButton({ children, link, big, color, ...props }) {
       }}
     >
       {link ? (
-        <a rel="noopener" target="_blank" {...props}>
+        <a rel="noopener" target={isMail ? undefined : '_blank'} {...props}>
           {children}
         </a>
       ) : (

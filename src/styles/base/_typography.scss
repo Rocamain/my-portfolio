@@ -34,10 +34,10 @@ h2 {
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   letter-spacing: 0.06em;
   @include u.breakpoint-min('medium') {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
   }
   @include u.breakpoint-min('large') {
     font-size: 1.55rem;
@@ -65,4 +65,7 @@ p {
   line-height: 1.5;
   color: var(--text-color-light-secondary);
   letter-spacing: 0.06em;
+  @include u.breakpoint-min('medium') {
+    font-size: 1.1rem;
+  }
 }

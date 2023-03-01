@@ -18,9 +18,23 @@ html[data-theme='dark'] {
   p {
     color: var(--text-color-dark-secondary);
   }
+  .input,
+  .textarea {
+    caret-color: var(--dark-highlight);
+    border-color: var(--text-color-dark);
+    color: var(--text-color-dark);
+    &span {
+      color: var(--dark-highlight);
+    }
+    &:focus,
+    :focus-visible {
+      border-color: var(--dark-highlight);
+    }
+  }
 
   .background-color {
     background-color: var(--text-color-dark);
+    // border-color: var(--text-color-light);
   }
   .header {
     background: linear-gradient(
