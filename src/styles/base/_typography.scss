@@ -69,3 +69,13 @@ p {
     font-size: 1.1rem;
   }
 }
+h6 {
+  margin-top: 0;
+  font-size: 1.14rem;
+  line-height: 1.5;
+
+  letter-spacing: 0.06em;
+  @include u.breakpoint-min('medium') {
+    font-size: 1.25rem;
+  }
+}

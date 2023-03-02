@@ -6,33 +6,30 @@
   margin-bottom: 3em;
   &__border {
     height: 3px;
-
     margin: 0;
   }
-
   &__title {
     margin: 0;
   }
-
   &__title_letter {
     text-transform: uppercase;
     @extend h2;
+  }
+  @include u.breakpoint-min('medium') {
+    margin-left: 0;
   }
 }
 
 .section_title {
   margin-left: -1em;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   &__border {
     height: 3px;
-
     margin: 0;
   }
-
   &__title {
     margin: 0;
   }
-
   &__title_letter {
     text-transform: uppercase;
     @extend h2;
@@ -54,7 +51,6 @@
       margin: 0;
       width: 2rem !important;
     }
-
     border-bottom: none;
     margin: 0;
     line-height: 100%;

@@ -43,8 +43,12 @@ export default function SectionTitle({ section, noRotate }) {
           className={`${
             noRotate ? 'section_title-normal__border' : 'section_title__border'
           } background-color`}
-          initial={{ opacity: 0, x: -5, width: 0 }}
-          whileInView={{ opacity: 1, x: 0, width: '180px' }}
+          initial={{ opacity: 0, x: -5, width: '30px' }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            width: noRotate ? '150px' : '200px',
+          }}
           transition={{ ...transitionConfig, delay: 0.2 }}
           viewport={viewportConfig}
         />

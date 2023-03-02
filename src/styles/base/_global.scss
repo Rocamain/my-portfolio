@@ -32,6 +32,12 @@
   }
 }
 
+@for $i from 1 through 5 {
+  .mb-#{$i} {
+    margin-bottom: $i + em;
+  }
+}
+
 // DESKTOP UTILITY CLASS
 
 .desktop {
@@ -56,9 +62,7 @@ section {
 
 .background-color {
   background-color: var(--background-color-dark);
-  // border-color: var(--background-color-dark);
+
   &:focus {
-    // border-color: var(--svg-color-hovered-dark);
-    // outline: none;
   }
 }

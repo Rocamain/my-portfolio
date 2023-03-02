@@ -31,10 +31,15 @@ html[data-theme='dark'] {
       border-color: var(--dark-highlight);
     }
   }
+  .contact_details {
+    &_phone,
+    &_email {
+      color: var(--dark-highlight);
+    }
+  }
 
   .background-color {
     background-color: var(--text-color-dark);
-    // border-color: var(--text-color-light);
   }
   .header {
     background: linear-gradient(
