@@ -1,4 +1,3 @@
-import SectionTitle from '../../global/SectionTitle';
 import Section from '../../global/Section';
 import ProjectsGrid from './ProjectsGrid';
 import { motion } from 'framer-motion';
@@ -15,7 +14,7 @@ const viewportConfig = {
 
 export default function Projects() {
   return (
-    <Section section="Projects">
+    <Section id="Projects" section="Projects">
       <motion.div
         className="projects_intro"
         initial={{ opacity: 0, x: -50 }}

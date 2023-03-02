@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 
 export default function Contact() {
   return (
-    <Section section="Contact">
+    <Section id="Contact" section="Contact">
       <ContactForm />
     </Section>
   );
