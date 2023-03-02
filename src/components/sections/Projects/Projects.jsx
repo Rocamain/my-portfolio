@@ -17,7 +17,7 @@ export default function Projects() {
   return (
     <Section section="Projects">
       <motion.div
-        style={{ padding: '1em 0', marginBottom: '2.5em' }}
+        className="projects_intro"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ ...transitionConfig, delay: 0.15 }}

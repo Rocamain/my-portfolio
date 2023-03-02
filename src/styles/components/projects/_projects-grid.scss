@@ -1,5 +1,8 @@
 @use '../../utilities/mixins' as u;
 
+.projects_intro {
+  margin-bottom: 3.5em;
+}
 .projects_grid {
   display: grid;
   gap: 3em;
