@@ -6,7 +6,7 @@ import SideNav from './SideNav';
 export default function Header() {
   return (
     <>
-      <header className="header">
+      <header id="Header" className="header">
         <Logo />
         <div className="menu-wrapper gap-1">
           <Menu />

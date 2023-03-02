@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useOutletContext } from 'react-router-dom';
 import AboutButton from './AboutButton';
 
 const animation = {
@@ -34,7 +34,7 @@ const viewportConfig = {
 };
 
 export default function About() {
-  const [isOpen, setOpen] = useState(false);
+  const { isOpen, setOpen } = useOutletContext();
   const handleOpen = () => {
     setOpen(!isOpen);
   };

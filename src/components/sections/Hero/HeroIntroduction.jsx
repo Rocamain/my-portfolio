@@ -15,7 +15,7 @@ const viewportConfig = {
 export default function HeroIntroduction() {
   return (
     <>
-      <div className="hero-intro">
+      <div id="About" className="hero-intro">
         <motion.h5
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
