@@ -2,16 +2,16 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('src/assets/fonts/Inter-Bold.woff2') format('woff2');
+  src: url('/assets/fonts/Inter-Bold.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Inter';
-  src: url('src/assets/fonts/Inter-Bold.woff2') format('woff2');
+  src: url('/assets/fonts/Inter-Bold.woff2') format('woff2');
   font-weight: bold;
 }
 
 body {
-  // cursor: url('src/assets/images/tie.cur'), pointer;
+  // cursor: url('/assets/images/tie.cur'), pointer;
 }
 html {
   box-sizing: border-box;
@@ -38,10 +38,10 @@ html {
   }
   #hero-image {
     @include u.breakpoint-max('medium') {
-      background-image: url('src/assets/images//hero-light.png');
+      background-image: url('/assets/images//hero-light.png');
     }
-    content: url(src/assets/images/hero-light.png);
-    shape-outside: url(src/assets/images/hero-light.png);
+    content: url(/assets/images/hero-light.png);
+    shape-outside: url(/assets/images/hero-light.png);
   }
 }
 
