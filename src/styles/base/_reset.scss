@@ -38,10 +38,10 @@ html {
   }
   #hero-image {
     @include u.breakpoint-max('medium') {
-      background-image: url('/assets/images//hero-light.png');
+      background-image: url('/assets/images//hero-light.webp');
     }
-    content: url(/assets/images/hero-light.png);
-    shape-outside: url(/assets/images/hero-light.png);
+    content: url('/assets/images//hero-light.webp');
+    shape-outside: url('/assets/images//hero-light.webp');
   }
 }
 
