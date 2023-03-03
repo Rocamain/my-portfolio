@@ -1,4 +1,4 @@
-import Section from '../../global/Section';
+import Section from '../../shared/Section';
 import ContactForm from './ContactForm';
 
 export default function Contact() {

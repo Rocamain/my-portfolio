@@ -1,5 +1,5 @@
 import { useForm, ValidationError } from '@formspree/react';
-import IconButton from '../../global/IconButton';
+import IconButton from '../../shared/IconButton';
 import { FaRegEnvelope, FaWhatsapp, FaHandSpock } from 'react-icons/fa';
 import Confirmation from './Confirmation';
 export default function ContactForm() {
@@ -99,13 +99,13 @@ export default function ContactForm() {
               </div>
             </IconButton>
           </div>
-          <div>
+          <div className="flex__a_center gap-1">
             <IconButton
               big
               link
               href={`https://api.whatsapp.com/send?phone=4407546354496`}
             >
-              <div className="flex_a_center gap-1">
+              <div className="flex__a_center gap-1">
                 <FaWhatsapp />
                 <span className="contact_details_phone"> 07546354496 </span>
               </div>

@@ -1,4 +1,4 @@
-import Section from '../../global/Section';
+import Section from '../../shared/Section';
 import ProjectsGrid from './ProjectsGrid';
 import { motion } from 'framer-motion';
 

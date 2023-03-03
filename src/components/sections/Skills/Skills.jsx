@@ -3,7 +3,7 @@ import { ThemeContext } from '../../../context/themeContext';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 import { skills } from '../../../data';
 import { motion } from 'framer-motion';
-import Section from '../../global/Section';
+import Section from '../../shared/Section';
 const transitionConfig = {
   type: 'spring',
   duration: 1,

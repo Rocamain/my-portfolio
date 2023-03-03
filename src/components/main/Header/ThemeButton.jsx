@@ -1,7 +1,7 @@
 import { FaRegLightbulb } from 'react-icons/fa';
 import { useContext } from 'react';
 import { ThemeContext } from '../../../context/themeContext';
-import IconButton from '../../global/IconButton';
+import IconButton from '../../shared/IconButton';
 
 export default function ThemeButton(props) {
   const { changeTheme, isDarkTheme } = useContext(ThemeContext);
