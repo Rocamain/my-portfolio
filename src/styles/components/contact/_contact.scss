@@ -13,10 +13,10 @@
       flex-direction: column;
       gap: 4em;
       padding: 0;
-      border: 1px solid black;
+      border: 1px solid var(--text-color-light);
       padding: 3em;
       &::before {
-        border: 1px solid black;
+        border: 1px solid var(--text-color-light);
         content: '';
         display: block;
         height: calc(100% - 3rem - 2.5em);
@@ -28,7 +28,7 @@
       }
     }
     &::after {
-      border: 1px solid black;
+      border: 1px solid var(--text-color-light);
       content: '';
       display: block;
       height: 2.5em;
@@ -60,7 +60,7 @@
   border: none;
   border-bottom: 1px solid var(--text-color-light);
   width: 100%;
-  caret-color: #8d6603;
+  caret-color: var(--light-highlight);
   font-size: 1.15rem;
   font-weight: 700;
   height: 50px;
@@ -68,7 +68,7 @@
   &:focus,
   :focus-visible {
     outline: none;
-    border-color: #8d6603;
+    border-color: var(--light-highlight);
   }
   &::placeholder {
     color: inherit;

@@ -4,20 +4,22 @@
   width: 90vw;
   margin-inline: auto;
   margin-bottom: 12vh;
+  &#Contact {
+    margin-bottom: 7vh;
+  }
+
   @include u.breakpoint-min('medium') {
     width: 85vw;
     max-width: 68.25em;
     margin-inline: auto;
-    margin-bottom: 12vh;
+    margin-bottom: 20vh;
     min-height: 200px;
+
     &_container {
-      padding: 0 30px 0 0;
+      padding: 0 30px 0 0em;
     }
     @include u.breakpoint-min('large') {
       max-width: 80em;
-      &_container {
-        padding: 0;
-      }
     }
     @include u.breakpoint-min('large') {
       max-width: 90em;
@@ -29,5 +31,30 @@
   @include u.breakpoint-min('medium') {
     display: grid;
     grid-template-columns: 4rem 1fr;
+    &__container {
+      padding: 0 30px 0 1em;
+    }
+  }
+  @include u.breakpoint-min('large') {
+    &__container {
+      padding: 0 30px 0 3em;
+    }
+  }
+}
+
+.section_block {
+  @media (min-width: 1595) {
+    padding: 1em 30px 0 2em;
+  }
+  @include u.breakpoint-min('large') {
+    &__container {
+      padding: 1em 30px 0 6em;
+      width: fit-content;
+    }
+  }
+  @media (min-width: 1595) {
+    padding: 1em 30px 0 0;
+    width: auto;
+    padding: 1em 30px 0 2em;
   }
 }

@@ -23,8 +23,18 @@ html {
   a:active {
     text-decoration: none;
     white-space: nowrap;
-    color: var(--text-color-light);
+    color: currentColor;
+    &.active {
+      color: var(--light-highlight);
+    }
     letter-spacing: 0.1rem;
+  }
+  a,
+  button {
+    &:hover,
+    &:focus {
+      color: rgba(56, 89, 197, 0.8);
+    }
   }
   #hero-image {
     @include u.breakpoint-max('medium') {

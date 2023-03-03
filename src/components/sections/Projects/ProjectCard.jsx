@@ -4,6 +4,12 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Tags from './Tags';
 
+const transitionConfig = {
+  type: 'spring',
+  duration: 1.5,
+  bounce: 0.45,
+};
+
 const viewportConfig = {
   once: true,
 
@@ -45,8 +51,21 @@ export default function ProjectCard({
       >
         <Tags tags={tags} />
       </motion.div>
-      <h3 className="card_container__title">{title}</h3>
-      <div className="flex gap-1" style={{ marginBottom: '1.4em' }}>
+      <motion.h3
+        className="card_container__title"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ ...transitionConfig, delay: 0.15 }}
+      >
+        {title}
+      </motion.h3>
+      <motion.div
+        className="flex gap-1"
+        style={{ marginBottom: '1.4em' }}
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ ...transitionConfig, delay: 0.35 }}
+      >
         <Link
           href={url}
           aria-label={id}
@@ -65,8 +84,14 @@ export default function ProjectCard({
         >
           see code
         </Link>
-      </div>
-      <p>{desc}</p>
+      </motion.div>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ ...transitionConfig, delay: 0.55 }}
+      >
+        {desc}
+      </motion.p>
     </article>
   );
 }

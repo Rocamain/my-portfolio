@@ -72,8 +72,7 @@ p {
 h6 {
   margin-top: 0;
   font-size: 1.14rem;
-  line-height: 1.5;
-
+  margin-bottom: 0;
   letter-spacing: 0.06em;
   @include u.breakpoint-min('medium') {
     font-size: 1.25rem;

@@ -9,8 +9,18 @@ html[data-theme='dark'] {
   a:visited,
   a:active {
     text-decoration: none;
-    color: var(--text-color-dark);
+    color: currentColor;
     white-space: nowrap;
+    &.active {
+      color: var(--dark-highlight);
+    }
+  }
+  a,
+  button {
+    &:hover,
+    &:focus {
+      color: rgb(255, 255, 0, 0.6);
+    }
   }
   button {
     color: var(--text-color-dark);
@@ -35,6 +45,19 @@ html[data-theme='dark'] {
     &_phone,
     &_email {
       color: var(--dark-highlight);
+    }
+  }
+  .contact_container {
+    @include u.breakpoint-min('small') {
+      &__inner {
+        border-color: var(--text-color-dark);
+        &::before {
+          border: 1px solid var(--text-color-dark);
+        }
+      }
+    }
+    &::after {
+      border: 1px solid var(--text-color-dark);
     }
   }
 
