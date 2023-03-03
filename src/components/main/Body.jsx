@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Footer from './Footer';
+import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import { Outlet } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
@@ -63,7 +63,7 @@ export default function Body() {
     <>
       <Header className="app-container" />
       <Outlet context={{ isOpen, setOpen }} />
-      <Footer className="app-container" />
+      <Footer />
     </>
   );
 }
