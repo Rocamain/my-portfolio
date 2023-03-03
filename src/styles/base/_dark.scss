@@ -85,10 +85,10 @@ html[data-theme='dark'] {
   }
   #hero-image {
     @include u.breakpoint-max('medium') {
-      background-image: url('src/assets/images//hero-dark.png');
+      background-image: url('/assets/images//hero-dark.png');
     }
-    content: url(src/assets/images/hero-dark.png);
-    shape-outside: 'url(src/assets/images//hero-dark.png)';
+    content: url(/assets/images/hero-dark.png);
+    shape-outside: 'url(/assets/images//hero-dark.png)';
   }
   .hero-intro__title {
     color: var(--dark-highlight);
