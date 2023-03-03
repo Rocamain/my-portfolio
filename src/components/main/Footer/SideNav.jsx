@@ -1,5 +1,5 @@
-import { FaLinkedinIn, FaGithub, FaDownload, FaArrowUp } from 'react-icons/fa';
-import IconButton from '../../global/IconButton';
+import { FaLinkedinIn, FaGithub, FaArrowUp } from 'react-icons/fa';
+import IconButton from '../../shared/IconButton';
 
 export default function SideNav() {
   return (
@@ -29,7 +29,7 @@ export default function SideNav() {
             aria-label="Download"
             link
           >
-            <FaDownload className="icon" />
+            <h6>CV</h6>
           </IconButton>
         </li>
         <li>
