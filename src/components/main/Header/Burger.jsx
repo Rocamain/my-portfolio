@@ -14,9 +14,15 @@ export default function Burger({ toggleShow, show }) {
     const line3 = refBurgerLineThree.current;
 
     if (line1 && line2 && line3) {
-      line1.classList.toggle('animate__line_one');
-      line2.classList.toggle('animate__line_two');
-      line3.classList.toggle('animate__line_three');
+      if (show) {
+        line1.classList.add('animate__line_one');
+        line2.classList.add('animate__line_two');
+        line3.classList.add('animate__line_three');
+      } else {
+        line1.classList.remove('animate__line_one');
+        line2.classList.remove('animate__line_two');
+        line3.classList.remove('animate__line_three');
+      }
     }
   }, [show]);
 
