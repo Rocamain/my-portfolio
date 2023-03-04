@@ -9,12 +9,11 @@ export default function Burger({ toggleShow, show }) {
       ? document.body.classList.add('no-scroll')
       : document.body.classList.remove('no-scroll');
 
-    const { current: line1 } = refBurgerLineOne;
-    const { current: line2 } = refBurgerLineTwo;
-    const { current: line3 } = refBurgerLineThree;
-    let mount = false;
-    mount = true;
-    if (line1 && line2 && line3 && mount) {
+    const line1 = refBurgerLineOne.current;
+    const line2 = refBurgerLineTwo.current;
+    const line3 = refBurgerLineThree.current;
+
+    if (line1 && line2 && line3) {
       line1.classList.toggle('animate__line_one');
       line2.classList.toggle('animate__line_two');
       line3.classList.toggle('animate__line_three');
