@@ -12,8 +12,9 @@ export default function Burger({ toggleShow, show }) {
     const { current: line1 } = refBurgerLineOne;
     const { current: line2 } = refBurgerLineTwo;
     const { current: line3 } = refBurgerLineThree;
-
-    if (line1 && line2 && line3) {
+    let mount = false;
+    mount = true;
+    if (line1 && line2 && line3 && mount) {
       line1.classList.toggle('animate__line_one');
       line2.classList.toggle('animate__line_two');
       line3.classList.toggle('animate__line_three');
