@@ -1,17 +1,14 @@
-import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 //  PENDING IMPLEMENTATION OF ACTIVE CLASS
 
 export default function MenuLinks({ handleShow }) {
-  const [start, setStart] = useState(false);
-
   const { hash } = useLocation();
 
   const handleClick = (e) => {
     e.stopPropagation();
-    handleShow && handleShow();
+    Boolean(handleShow) && handleShow();
   };
 
   return (
@@ -35,7 +32,6 @@ export default function MenuLinks({ handleShow }) {
 
       <NavLink
         onClick={handleClick}
-        // className={handle}
         className={() => `nav-link ${hash === '#Contact' ? 'active' : ''}`}
         to="/#Contact"
       >
