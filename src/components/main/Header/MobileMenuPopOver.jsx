@@ -11,6 +11,16 @@ const variants = {
     // overflowY: 'hidden',
   },
 };
+const variantsNav = {
+  show: {
+    visibility: 'visible',
+    // overflowY: 'auto',
+  },
+  hide: {
+    visibility: 'hidden',
+    // overflowY: 'hidden',
+  },
+};
 
 export default function MobileMenuPopOver({ show, toggleShow }) {
   const handleClick = () => {
@@ -28,8 +38,8 @@ export default function MobileMenuPopOver({ show, toggleShow }) {
       <motion.nav
         initial={{ height: '0%' }}
         whileInView={show ? 'show' : 'hide'}
-        transition={{ duration: 0.45 }}
-        variants={variants}
+        transition={{ duration: 0.45, delay: 0.1 }}
+        variants={variantsNav}
       >
         <MenuLinks handleShow={toggleShow} />
       </motion.nav>
