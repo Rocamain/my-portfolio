@@ -1,5 +1,5 @@
 .mobile-menu__container {
-  overflow-y: hidden;
+  // overflow-y: hidden;
   position: fixed;
   z-index: 999;
   right: 0;
@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
   }
   // gap: 2em;
 }
