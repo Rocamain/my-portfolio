@@ -35,7 +35,11 @@ html {
     &:focus {
       color: rgba(56, 89, 197, 0.8);
     }
-    @media (hover: none) {
+  }
+
+  @media (hover: none) {
+    a,
+    button {
       &:hover,
       &:focus {
         color: inherit;
