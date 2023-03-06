@@ -4,11 +4,11 @@ import MenuLinks from './MenuLinks';
 const variants = {
   show: {
     height: '100%',
-    overflowY: 'auto',
+    // overflowY: 'auto',
   },
   hide: {
     height: '0%',
-    overflowY: 'hidden',
+    // overflowY: 'hidden',
   },
 };
 
