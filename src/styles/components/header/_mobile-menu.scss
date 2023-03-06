@@ -1,11 +1,12 @@
 .mobile-menu__container {
   overflow: hidden;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   right: 0;
   bottom: 0;
   width: 100%;
   backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   display: flex;
   flex-direction: column;
   justify-content: center;
