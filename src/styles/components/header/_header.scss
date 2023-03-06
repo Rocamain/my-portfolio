@@ -10,6 +10,7 @@
   position: sticky;
   top: 0;
   z-index: 2;
+
   @include u.breakpoint-max('medium') {
     background: var(--background-color-light);
   }
@@ -30,6 +31,7 @@
   .nav__list {
     @include u.breakpoint-min('medium') {
       list-style: none;
+
       display: flex;
       gap: 2em;
       max-width: 80%;
