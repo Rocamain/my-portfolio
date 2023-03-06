@@ -15,11 +15,17 @@ html[data-theme='dark'] {
       color: var(--dark-highlight);
     }
   }
-  a,
-  button {
-    &:hover,
-    &:focus {
-      color: rgb(255, 255, 0, 0.6);
+  @media (hover: hover) and (pointer: fine) {
+    a,
+    button {
+      &:hover,
+      &:focus {
+        color: var(--dark-highlight);
+        &,
+        svg {
+          color: var(--dark-highlight) !important;
+        }
+      }
     }
   }
   button {
