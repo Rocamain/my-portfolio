@@ -102,9 +102,11 @@ html[data-theme='dark'] {
       background-color: var(--dark-highlight);
       border-color: var(--dark-highlight);
     }
-    &:hover {
-      color: var(--text-color-light);
-      border-color: var(--dark-highlight);
+    @media (hover: hover) {
+      &:hover {
+        color: var(--text-color-light);
+        border-color: var(--dark-highlight);
+      }
     }
     &:before {
       content: '';
