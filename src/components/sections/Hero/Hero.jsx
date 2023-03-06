@@ -32,7 +32,7 @@ export default function Hero() {
 
         <div
           style={{
-            marginTop: matchDesktop ? undefined : '-9.5em',
+            marginTop: matchDesktop ? undefined : '-25vh',
           }}
         >
           <HeroIntroduction />
