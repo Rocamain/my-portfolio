@@ -48,7 +48,6 @@ export default function About() {
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.p
-            style={{ overflow: 'hidden' }}
             initial={{
               height: 0,
               opacity: 0,

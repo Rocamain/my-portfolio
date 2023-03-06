@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AboutButton({ handleOpen, isOpen }) {
   const handleClick = () => {
     handleOpen();
