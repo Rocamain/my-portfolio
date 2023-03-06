@@ -4,9 +4,11 @@ import MenuLinks from './MenuLinks';
 const variants = {
   show: {
     height: '100%',
+    overflowY: 'auto',
   },
   hide: {
     height: '0%',
+    overflowY: 'hidden',
   },
 };
 
@@ -23,9 +25,14 @@ export default function MobileMenuPopOver({ show, toggleShow }) {
       className="mobile-menu__container"
       onClick={handleClick}
     >
-      <nav>
+      <motion.nav
+        initial={{ height: '0%' }}
+        whileInView={show ? 'show' : 'hide'}
+        transition={{ duration: 0.45 }}
+        variants={variants}
+      >
         <MenuLinks handleShow={toggleShow} />
-      </nav>
+      </motion.nav>
     </motion.div>
   );
 }
