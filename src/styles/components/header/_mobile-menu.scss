@@ -25,14 +25,13 @@
 
 .burger__line {
   $root: &;
-
   transition: 0.25s;
   width: 2em;
   height: 0.3rem;
 }
 
 .animate__line_one {
-  transform: translateY(0.8em) rotate(45deg);
+  transform: translateY(0.87em) rotate(45deg);
 }
 
 .animate__line_two {
