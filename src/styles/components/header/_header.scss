@@ -6,26 +6,30 @@
   align-items: center;
   justify-content: space-between;
   height: 10%;
-  padding: 1em 2.5em 1em 0.5em;
+  padding: 1em 0.5em 1em 0.5em;
   position: sticky;
   top: 0;
   z-index: 2;
-  background: linear-gradient(var(--background-color-light) 0 40%, transparent);
-
-  @include u.breakpoint-max('small') {
-    padding: 1em 0.5em;
+  @include u.breakpoint-max('medium') {
+    background: var(--background-color-light);
+  }
+  @include u.breakpoint-min('medium') {
+    background: linear-gradient(
+      var(--background-color-light) 0 70%,
+      transparent
+    );
   }
 
   @include u.breakpoint-min('large') {
-    // max-width: 1400px;
-
-    margin-inline: auto;
+    background: linear-gradient(
+      var(--background-color-light) 0 70%,
+      transparent
+    );
   }
 
   .nav__list {
     @include u.breakpoint-min('medium') {
       list-style: none;
-
       display: flex;
       gap: 2em;
       max-width: 80%;

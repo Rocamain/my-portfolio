@@ -31,9 +31,11 @@ html {
   }
   a,
   button {
-    &:hover,
-    &:focus {
-      color: rgba(56, 89, 197, 0.8);
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        color: rgba(56, 89, 197, 0.8);
+      }
     }
   }
   #hero-image {
