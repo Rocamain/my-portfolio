@@ -71,11 +71,16 @@ html[data-theme='dark'] {
     background-color: var(--text-color-dark);
   }
   .header {
-    background: linear-gradient(
-      var(--background-color-dark) 0 40%,
-      transparent
-    );
+    background: var(--background-color-dark);
+
+    @include u.breakpoint-min('medium') {
+      background: linear-gradient(
+        var(--background-color-dark) 0 70%,
+        transparent
+      );
+    }
   }
+
   .side-nav {
     background-color: var(--background-color-dark);
     @include u.breakpoint-min('medium') {

@@ -12,7 +12,7 @@ export default function ThemeButton(props) {
       onClick={handleClick}
       className="theme-button"
       {...props}
-      color={isDarkTheme ? 'var(--dark-highlight)' : undefined}
+      color={isDarkTheme ? 'var(--dark-highlight)' : 'var(--light-highlight)'}
     >
       <FaRegLightbulb />
     </IconButton>
