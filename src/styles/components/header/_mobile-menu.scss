@@ -1,21 +1,16 @@
 .mobile-menu__container {
-  // overflow-y: hidden;
   position: fixed;
   z-index: 999;
   right: 0;
   bottom: 0;
   width: 100%;
-
   backdrop-filter: blur(40px);
-  visibility: 'hidden';
   nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // overflow-y: hidden;
   }
-  // gap: 2em;
 }
 
 .burger {
