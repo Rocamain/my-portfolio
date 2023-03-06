@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import About from './About';
-
+import useMediaQuery from '../../../hooks/useMediaQuery';
 const transitionConfig = {
   type: 'spring',
   duration: 1.5,
@@ -13,11 +13,14 @@ const viewportConfig = {
 };
 
 export default function HeroIntroduction() {
+  const matchMobile = !useMediaQuery('pad');
+  console.log(matchMobile);
+  const x = matchMobile ? 30 : 50;
   return (
     <>
       <div id="About" className="hero-intro">
         <motion.h5
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0.2, x: -x }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ ...transitionConfig, delay: 0.15 }}
           viewport={viewportConfig}
@@ -27,7 +30,7 @@ export default function HeroIntroduction() {
         </motion.h5>
 
         <motion.h5
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: x }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ ...transitionConfig, delay: 0.35 }}
           viewport={viewportConfig}
@@ -35,7 +38,7 @@ export default function HeroIntroduction() {
           Full Stack Developer
         </motion.h5>
         <motion.p
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: -x }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ ...transitionConfig, delay: 0.35 }}
           viewport={viewportConfig}

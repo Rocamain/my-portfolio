@@ -24,7 +24,8 @@
   }
 }
 .hero-container {
-  overflow-x: hidden;
+  // overflow-x: hidden;
+
   @include u.breakpoint-min('medium') {
     display: flex;
     justify-content: center;
@@ -41,14 +42,13 @@
     letter-spacing: 0.25em;
     text-transform: uppercase;
     margin-bottom: 1em;
+    box-sizing: border-box;
   }
 
   @include u.breakpoint-min('small') {
     width: 70vw;
   }
   @include u.breakpoint-min('medium') {
-    padding-right: 5vw;
-    width: calc(900px + 5vw);
     padding-top: 20%;
   }
   @include u.breakpoint-min('large') {

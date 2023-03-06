@@ -10,7 +10,7 @@
   background: transparent;
   position: relative;
   transition: all 1s;
-  overflow: hidden;
+
   &__active {
     @extend .btn;
     $root: &;
