@@ -22,7 +22,7 @@ export default function Skills() {
   return (
     <Section section="Skills" noRotate>
       <div className="techContainer">
-        {skills.map(({ title, src, dark }, index) => (
+        {skills.map(({ title, src, dark, wide }, index) => (
           <motion.div
             key={index + '-' + title}
             initial={{ scale: 0 }}
@@ -31,8 +31,16 @@ export default function Skills() {
             viewport={viewportConfig}
           >
             <img
-              width={matchesPhone ? '55' : '90'}
-              height={matchesPhone ? '55' : '90'}
+              width={
+                matchesPhone
+                  ? wide
+                    ? '80px'
+                    : '55px'
+                  : wide
+                  ? '130px'
+                  : '90px'
+              }
+              height={matchesPhone ? '55px' : '90px'}
               title={title}
               src={isDarkTheme && dark ? dark : src}
               alt={title}
