@@ -15,21 +15,38 @@ html[data-theme='dark'] {
       color: var(--dark-highlight);
     }
   }
+  button {
+    color: currentColor;
+  }
   @media (hover: hover) and (pointer: fine) {
-    a,
-    button {
+    button,
+    a {
       &:hover,
       &:focus {
         color: var(--dark-highlight);
-        &,
-        svg {
-          color: var(--dark-highlight) !important;
+        & > svg {
+          color: var(--dark-highlight);
         }
       }
     }
+    .btn {
+      &:hover,
+      &:focus {
+        color: var(--text-color-light);
+      }
+    }
   }
-  button {
-    color: var(--text-color-dark);
+
+  .theme-button {
+    color: var(--dark-highlight);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover,
+      &:focus {
+        & > svg {
+          color: var(--svg-color-hovered-dark);
+        }
+      }
+    }
   }
   p {
     color: var(--text-color-dark-secondary);

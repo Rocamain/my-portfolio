@@ -10,37 +10,17 @@
   background: transparent;
   position: relative;
   transition: all 1s;
-  overflow: hidden;
-  &__active {
-    @extend .btn;
-    $root: &;
-    color: var(--text-color-dark);
-    background-color: var(--text-color-light);
-
+  @media (hover: hover) and (pointer: fine) {
+    overflow-x: hidden;
     &:hover {
-      background-color: transparent !important;
+      color: var(--text-color-dark);
     }
 
-    ::before {
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 0%;
-      top: 0;
-      left: -2.5em;
-      transform: skewX(45deg);
-      background-color: var(--text-color-dark);
-      z-index: -1;
-      transition: all 1s;
+    &:hover::before {
+      width: 160%;
     }
   }
-}
-@media (hover) {
-  .btn:hover {
-    color: var(--text-color-dark);
-  }
-
-  .btn::before {
+  &::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -52,8 +32,28 @@
     z-index: -1;
     transition: all 1s;
   }
+  &__active {
+    @extend .btn;
+    $root: &;
+    color: var(--text-color-dark);
+    background-color: var(--text-color-light);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: transparent !important;
+      }
 
-  .btn:hover::before {
-    width: 160%;
+      ::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        top: 0;
+        left: -2.5em;
+        transform: skewX(45deg);
+        background-color: var(--text-color-dark);
+        z-index: -1;
+        transition: all 1s;
+      }
+    }
   }
 }

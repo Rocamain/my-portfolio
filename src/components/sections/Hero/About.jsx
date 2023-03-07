@@ -42,16 +42,13 @@ export default function About() {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5, delay: 0.5 }}
+      transition={{ duration: 1.5, delay: 0.15 }}
     >
       <AboutButton handleOpen={handleOpen} isOpen={isOpen} />
-      <AnimatePresence initial={false}>
+      <AnimatePresence mode="wait">
         {isOpen && (
           <motion.p
-            initial={{
-              height: 0,
-              opacity: 0,
-            }}
+            initial={{ height: 0, opacity: 0 }}
             animate={animation}
             exit={animationExit}
             viewport={viewportConfig}

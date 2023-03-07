@@ -15,12 +15,13 @@ const viewportConfig = {
 export default function HeroIntroduction() {
   const matchMobile = !useMediaQuery('pad');
 
-  const x = matchMobile ? 30 : 50;
+  const x = matchMobile ? 40 : 60;
+  const opacity = matchMobile ? 1 : 0;
   return (
     <>
-      <div onload={() => console.log('load')} id="About" className="hero-intro">
+      <div id="About" className="hero-intro">
         <motion.h5
-          initial={{ opacity: 0.5, x: -x }}
+          initial={{ opacity: opacity, x: -x }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ ...transitionConfig, delay: 0.15 }}
           viewport={viewportConfig}
@@ -30,17 +31,17 @@ export default function HeroIntroduction() {
         </motion.h5>
 
         <motion.h5
-          initial={{ opacity: 0.5, x: x }}
+          initial={{ opacity: opacity, x: x }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ ...transitionConfig, delay: 0.35 }}
+          transition={{ ...transitionConfig, delay: 1 }}
           viewport={viewportConfig}
         >
           Full Stack Developer
         </motion.h5>
         <motion.p
-          initial={{ opacity: 0.5, x: -x }}
+          initial={{ opacity: opacity, x: -x }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ ...transitionConfig, delay: 0.35 }}
+          transition={{ ...transitionConfig, delay: 1 }}
           viewport={viewportConfig}
           style={{ marginBottom: '1em' }}
         >

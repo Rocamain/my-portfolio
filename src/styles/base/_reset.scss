@@ -23,22 +23,8 @@ html {
     white-space: nowrap;
     color: currentColor;
     letter-spacing: 0.1rem;
-    &.active {
-      color: rgba(56, 89, 197, 0.8);
-    }
-  }
-  @media (hover: hover) and (pointer: fine) {
-    a,
-    button {
-      &:hover {
-        color: rgba(56, 89, 197, 0.8);
-        &,
-        svg {
-          color: rgba(56, 89, 197, 0.8) !important;
-        }
       }
-    }
-  }
+
 
   #hero-image {
     @include u.breakpoint-max('medium') {
