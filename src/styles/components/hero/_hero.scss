@@ -24,8 +24,6 @@
   }
 }
 .hero-container {
-  // overflow-x: hidden;
-
   @include u.breakpoint-min('medium') {
     display: flex;
     justify-content: center;

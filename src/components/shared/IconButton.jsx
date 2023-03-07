@@ -1,7 +1,7 @@
 import { IconContext } from 'react-icons';
 import useMediaQuery from '../../hooks/useMediaQuery';
 
-export default function IconButton({ children, link, big, color, ...props }) {
+export default function IconButton({ children, link, big, ...props }) {
   const matchesLaptop = useMediaQuery('laptop');
 
   const isMail = props?.href?.includes('mailto:');
@@ -11,7 +11,6 @@ export default function IconButton({ children, link, big, color, ...props }) {
   return (
     <IconContext.Provider
       value={{
-        color: color,
         size: big ? '2rem' : matchesLaptop ? '2rem' : '1.5rem',
         className: 'icon-button',
       }}
