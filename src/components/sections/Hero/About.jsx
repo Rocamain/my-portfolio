@@ -23,7 +23,7 @@ const animationExit = {
       duration: 0.4,
     },
     opacity: {
-      duration: 0.25,
+      duration: 0.15,
     },
   },
 };
