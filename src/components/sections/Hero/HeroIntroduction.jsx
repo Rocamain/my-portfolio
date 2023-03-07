@@ -13,9 +13,9 @@ const viewportConfig = {
 };
 
 export default function HeroIntroduction() {
-  const matchMobile = !useMediaQuery('pad');
+  const matchMobile = !useMediaQuery('laptop');
 
-  const x = matchMobile ? 40 : 60;
+  const x = matchMobile ? 30 : 60;
   const opacity = matchMobile ? 1 : 0;
   return (
     <div id="About" className="hero-intro">

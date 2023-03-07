@@ -9,7 +9,7 @@ export default function Main() {
       <Hero />
       <Skills />
       <Projects />
-      {/* <Contact /> */}
+      <Contact />
     </main>
   );
 }
