@@ -12,8 +12,7 @@ const transitionConfig = {
 
 const viewportConfig = {
   once: true,
-
-  // margin: '0px 0px -100px 0px',
+  margin: '0px 0px -100px 0px',
 };
 
 export default function ProjectCard({
@@ -28,7 +27,10 @@ export default function ProjectCard({
 }) {
   const [show, setShow] = useState(false);
   // useMedia query use min query use ! to change to max
-  const MatchPads = !useMediaQuery('laptop');
+
+  const matchMobile = !useMediaQuery('laptop');
+
+  const x = matchMobile ? 20 : 60;
 
   return (
     <article data-id={id.toString()} className="card_container">
@@ -39,35 +41,38 @@ export default function ProjectCard({
         className="card_container__img"
         style={{
           backgroundImage: `${
-            show || MatchPads
-              ? 'linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(145, 170, 253, 0.8)),'
+            show || matchMobile
+              ? 'linear-gradient(rgba(245, 246, 222, 0.22), rgba(245, 170, 253, 0.6)),'
               : ''
           } 
     url(${img})`,
         }}
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.1 }}
         viewport={viewportConfig}
         whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.2, delay: 0.15 }}
       >
         <Tags tags={tags} />
       </motion.div>
       <motion.h3
         className="card_container__title"
-        initial={{ opacity: 0, x: -50 }}
+        initial={{ opacity: 0.3, x: x }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ ...transitionConfig, delay: 0.15 }}
+        viewport={viewportConfig}
       >
         {title}
       </motion.h3>
       <motion.div
         className="flex gap-1"
         style={{ marginBottom: '1.4em' }}
-        initial={{ opacity: 0, x: 50 }}
+        initial={{ opacity: 0.3, x: x }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ ...transitionConfig, delay: 0.35 }}
+        transition={{ ...transitionConfig, delay: 0.2 }}
+        viewport={viewportConfig}
       >
         <Link
-          href={url}
+          to={url}
           aria-label={id}
           rel="noopener"
           target="_blank"
@@ -76,7 +81,7 @@ export default function ProjectCard({
           Live demo
         </Link>
         <Link
-          href={github}
+          to={github}
           aria-label="Github"
           rel="noopener"
           target="_blank"
@@ -86,9 +91,10 @@ export default function ProjectCard({
         </Link>
       </motion.div>
       <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ ...transitionConfig, delay: 0.55 }}
+        initial={{ opacity: 0.3, x: -x }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ ...transitionConfig, delay: 0.15 }}
+        viewport={viewportConfig}
       >
         {desc}
       </motion.p>

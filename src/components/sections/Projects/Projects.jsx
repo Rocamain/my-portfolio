@@ -1,6 +1,7 @@
 import Section from '../../shared/Section';
 import ProjectsGrid from './ProjectsGrid';
 import { motion } from 'framer-motion';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 const transitionConfig = {
   type: 'spring',
@@ -13,11 +14,13 @@ const viewportConfig = {
 };
 
 export default function Projects() {
+  const matchMobile = !useMediaQuery('laptop');
+  const x = matchMobile ? 20 : 60;
   return (
     <Section id="Projects" section="Projects">
       <motion.div
         className="projects_intro"
-        initial={{ opacity: 0, x: -50 }}
+        initial={{ opacity: 0.2, x: x }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ ...transitionConfig, delay: 0.15 }}
         viewport={viewportConfig}
