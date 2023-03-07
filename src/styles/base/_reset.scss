@@ -23,15 +23,29 @@ html {
     white-space: nowrap;
     color: currentColor;
     letter-spacing: 0.1rem;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    button,
+    a {
+      &:hover {
+        color: var(--color-hovered-light);
+        & > svg {
+          color: var(--color-hovered-light);
+        }
       }
-
+    }
+    .btn {
+      &:hover {
+        color: var(--text-color-dark);
+      }
+    }
+  }
 
   #hero-image {
-    @include u.breakpoint-max('medium') {
-      background-image: url('/assets/images//hero-light.webp');
+    @include u.breakpoint-min('medium') {
+      shape-outside: url('/assets/images//hero-light.webp');
     }
     content: url('/assets/images//hero-light.webp');
-    shape-outside: url('/assets/images//hero-light.webp');
   }
 }
 

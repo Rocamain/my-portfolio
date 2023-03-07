@@ -21,8 +21,7 @@ html[data-theme='dark'] {
   @media (hover: hover) and (pointer: fine) {
     button,
     a {
-      &:hover,
-      &:focus {
+      &:hover {
         color: var(--dark-highlight);
         & > svg {
           color: var(--dark-highlight);
@@ -30,8 +29,7 @@ html[data-theme='dark'] {
       }
     }
     .btn {
-      &:hover,
-      &:focus {
+      &:hover {
         color: var(--text-color-light);
       }
     }
@@ -112,11 +110,10 @@ html[data-theme='dark'] {
     font-weight: 700;
   }
   #hero-image {
-    @include u.breakpoint-max('medium') {
-      background-image: url('/assets/images//hero-dark.webp');
+    @include u.breakpoint-min('medium') {
+      shape-outside: url('/assets/images//hero-dark.webp');
     }
-    content: url('/assets/images/hero-dark.webp');
-    shape-outside: url('/assets/images//hero-dark.webp');
+    content: url('/assets/images//hero-dark.webp');
   }
   .hero-intro__title {
     color: var(--dark-highlight);

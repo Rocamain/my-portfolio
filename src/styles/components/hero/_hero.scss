@@ -6,7 +6,8 @@
   background-size: auto 100%;
   margin-top: 0;
   transition: 0.65s;
-
+  object-fit: cover;
+  margin-inline: auto;
   @include u.breakpoint-min('small') {
     min-height: 700px;
     height: 75vh;
@@ -33,6 +34,9 @@
 .hero-intro {
   width: 80vw;
   margin-inline: auto;
+  @include u.breakpoint-max('medium') {
+    margin-top: -15vh;
+  }
   &__title {
     color: var(--text-color-light-secondary);
     font-weight: 900;
@@ -48,10 +52,11 @@
   }
   @include u.breakpoint-min('medium') {
     padding-top: 20%;
+    width: 880px;
   }
   @include u.breakpoint-min('large') {
     padding-right: 10vw;
-    width: 1200px;
+    width: 1400px;
   }
   @include u.breakpoint-min('xlarge') {
     padding-right: 10vw;
