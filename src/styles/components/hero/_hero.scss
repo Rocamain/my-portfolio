@@ -18,7 +18,6 @@
     overflow: clip;
     shape-image-threshold: 0.2;
     shape-margin: 20px;
-    height: 75vh;
   }
   @include u.breakpoint-min('large') {
     height: 85vh;
@@ -38,7 +37,7 @@
     margin-top: -15vh;
   }
   &__title {
-    color: var(--text-color-light-secondary);
+    color: var(--text-color-secondary);
     font-weight: 900;
     font-size: 1.65rem;
     letter-spacing: 0.25em;

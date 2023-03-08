@@ -10,22 +10,15 @@
   position: sticky;
   top: 0;
   z-index: 2;
-
   @include u.breakpoint-max('medium') {
-    background: var(--background-color-light);
+    background: var(--background-color);
   }
   @include u.breakpoint-min('medium') {
-    background: linear-gradient(
-      var(--background-color-light) 0 70%,
-      transparent
-    );
+    background: linear-gradient(var(--background-color) 0 70%, transparent);
   }
 
   @include u.breakpoint-min('large') {
-    background: linear-gradient(
-      var(--background-color-light) 0 70%,
-      transparent
-    );
+    background: linear-gradient(var(--background-color) 0 70%, transparent);
   }
 
   .nav__list {
@@ -57,10 +50,10 @@
 .theme-button {
   cursor: pointer;
   padding: 0.2em;
-  color: var(--light-highlight);
+  color: var(--highlight);
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: rgba(56, 89, 197, 0.8);
+      color: var(--hover-color);
     }
   }
 }
@@ -74,15 +67,17 @@ nav {
 .nav-link {
   font-size: 1.2rem;
   padding: 0.6em 0.6em;
+  &.active {
+    color: var(--hover-color);
+  }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      color: rgba(56, 89, 197, 0.8);
+      color: var(--hover-color);
     }
   }
-&.active{
-  color: rgba(56, 89, 197, 0.8);
-
-}
+  &.active {
+    color: var(--hover-color);
+  }
   @include u.breakpoint-max('medium') {
     font-size: 2.4rem;
   }

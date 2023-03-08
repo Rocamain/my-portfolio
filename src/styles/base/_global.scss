@@ -1,5 +1,35 @@
 @use '../utilities' as u;
 
+body {
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+button,
+a {
+  color: currentColor;
+  letter-spacing: 0.1rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  button,
+  a {
+    &:hover {
+      color: var(--hover-color);
+      & > svg {
+        color: var(--hover-color);
+      }
+    }
+  }
+}
+
+#hero-image {
+  @include u.breakpoint-min('medium') {
+    shape-outside: var(--hero-url);
+  }
+  content: var(--hero-url);
+}
+
 // FLEX UTILITY CLASS
 
 .flex_grow {
@@ -58,11 +88,4 @@
 
 section {
   margin-bottom: 8vh;
-}
-
-.background-color {
-  background-color: var(--background-color-dark);
-
-  &:focus {
-  }
 }

@@ -1,141 +1,24 @@
-@use '../utilities/' as u;
+:root[data-theme='dark'] {
+  // background
+  --background-color: #000000;
+  --hover-bf-color: #ffff00;
 
-html[data-theme='dark'] {
-  box-sizing: border-box;
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
+  // hero
 
-  a,
-  a:visited,
-  a:active {
-    text-decoration: none;
-    color: currentColor;
-    white-space: nowrap;
-    &.active {
-      color: var(--dark-highlight);
-    }
-  }
-  button {
-    color: currentColor;
-  }
-  @media (hover: hover) and (pointer: fine) {
-    button,
-    a {
-      &:hover {
-        color: var(--dark-highlight);
-        & > svg {
-          color: var(--dark-highlight);
-        }
-      }
-    }
-    .btn {
-      &:hover {
-        color: var(--text-color-light);
-      }
-    }
-  }
+  --hero-url: url('/assets/images//hero-dark.webp');
 
-  .theme-button {
-    color: var(--dark-highlight);
-    @media (hover: hover) and (pointer: fine) {
-      &:hover,
-      &:focus {
-        & > svg {
-          color: var(--svg-color-hovered-dark);
-        }
-      }
-    }
-  }
-  p {
-    color: var(--text-color-dark-secondary);
-  }
-  .input,
-  .textarea {
-    caret-color: var(--dark-highlight);
-    border-color: var(--text-color-dark);
-    color: var(--text-color-dark);
-    &span {
-      color: var(--dark-highlight);
-    }
-    &:focus,
-    :focus-visible {
-      border-color: var(--dark-highlight);
-    }
-  }
-  .contact_details {
-    &_phone,
-    &_email {
-      color: var(--dark-highlight);
-    }
-  }
-  .contact_container {
-    @include u.breakpoint-min('small') {
-      &__inner {
-        border-color: var(--text-color-dark);
-        &::before {
-          border: 1px solid var(--text-color-dark);
-        }
-      }
-    }
-    &::after {
-      border: 1px solid var(--text-color-dark);
-    }
-  }
+  // text
+  --text-color: #ffffff;
+  --text-color-secondary: #ccc8c8;
+  --hover-color: #ffff00;
+  --hover-text-color: #ffff00;
+  --hover-contrast-color: #000000;
 
-  .background-color {
-    background-color: var(--text-color-dark);
-  }
-  .header {
-    background: var(--background-color-dark);
+  // other
 
-    @include u.breakpoint-min('medium') {
-      background: linear-gradient(
-        var(--background-color-dark) 0 70%,
-        transparent
-      );
-    }
-  }
-
-  .side-nav {
-    background-color: var(--background-color-dark);
-    @include u.breakpoint-min('medium') {
-      background-color: transparent;
-    }
-  }
-  .logo__subtitle {
-    color: var(--text-color-dark-secondary);
-  }
-  .logo__title {
-    color: var(--text-color-dark);
-    font-weight: 700;
-  }
-  #hero-image {
-    @include u.breakpoint-min('medium') {
-      shape-outside: url('/assets/images//hero-dark.webp');
-    }
-    content: url('/assets/images//hero-dark.webp');
-  }
-  .hero-intro__title {
-    color: var(--dark-highlight);
-  }
-  .btn {
-    color: var(--text-color-dark);
-    border-color: var(--text-color-dark);
-    &__active {
-      @extend .btn;
-      color: var(--background-color-dark);
-      background-color: var(--dark-highlight);
-      border-color: var(--dark-highlight);
-    }
-    @media (hover: hover) {
-      &:hover {
-        color: var(--text-color-light);
-        border-color: var(--dark-highlight);
-      }
-    }
-    &:before {
-      content: '';
-      background-color: var(--dark-highlight);
-    }
-  }
+  --highlight: #ffff00;
+  --gradient: linear-gradient(
+    rgba(245, 246, 222, 0.22),
+    rgba(245, 170, 253, 0.6)
+  );
 }

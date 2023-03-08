@@ -4,11 +4,11 @@
   $root: &;
   &__title {
     margin-bottom: 0.15em;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.35rem;
     letter-spacing: 0.05em;
     line-height: 1;
-    color: var(--text-color-light);
+    color: var(--text-color);
     @include u.breakpoint-max('large') {
       font-weight: 600;
       font-size: 1.25rem;
@@ -22,7 +22,7 @@
     margin: 0;
     letter-spacing: 0.2em;
     font-size: 0.9rem;
-
+    color: var(--text-color-secondary);
     line-height: 1;
     @include u.breakpoint-max('small') {
       font-weight: 600;
