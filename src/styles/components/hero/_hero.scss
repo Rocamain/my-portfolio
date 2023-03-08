@@ -13,6 +13,7 @@
     height: 75vh;
   }
   @include u.breakpoint-min('medium') {
+    min-height: 780px;
     float: left;
     overflow-clip-margin: content-box;
     overflow: clip;

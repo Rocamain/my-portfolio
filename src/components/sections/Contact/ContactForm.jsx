@@ -48,7 +48,7 @@ export default function ContactForm() {
           <label
             className="label"
             htmlFor="message"
-            style={{ display: 'flex', flexDirection: 'column' }}
+            style={{ display: 'flex', flexDirection: 'column', margin: 0 }}
           >
             Message
           </label>
