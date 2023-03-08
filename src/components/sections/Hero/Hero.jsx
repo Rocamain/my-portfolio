@@ -15,7 +15,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             viewport={viewportConfig}
             whileInView={{ opacity: 1 }}
-            id={'hero-image'}
+            id="hero-image"
             alt="myself"
           />
         </div>

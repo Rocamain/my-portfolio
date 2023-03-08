@@ -40,11 +40,7 @@ export default function ProjectCard({
         aria-label={`background image${alt}`}
         className="card_container__img"
         style={{
-          backgroundImage: `${
-            show || matchMobile
-              ? 'linear-gradient(rgba(245, 246, 222, 0.22), rgba(245, 170, 253, 0.6)),'
-              : ''
-          } 
+          backgroundImage: `${show || matchMobile ? 'var(--gradient),' : ''} 
     url(${img})`,
         }}
         initial={{ opacity: 0.1 }}
