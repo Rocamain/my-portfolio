@@ -1,5 +1,7 @@
-import React from 'react';
-
 export default function Error() {
-  return <div>Error</div>;
+  return (
+    <div className="oops">
+      <h3>Opps...</h3>
+    </div>
+  );
 }
