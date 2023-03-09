@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import MenuLinks from './MenuLinks';
 
@@ -20,6 +21,16 @@ const variantsNav = {
 };
 
 export default function MobileMenuPopOver({ show, toggleShow }) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      show
+        ? document.body.classList.add('no-scroll')
+        : document.body.classList.remove('no-scroll');
+    }, 460);
+
+    return () => clearTimeout(timer);
+  }, [show]);
+
   const handleClick = () => {
     toggleShow();
   };
