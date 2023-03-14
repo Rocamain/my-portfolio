@@ -25,7 +25,7 @@ export default function SideNav() {
         </li>
         <li>
           <IconButton
-            href="https://www.linkedin.com/in/francisco-javier-roca-vazquez/"
+            href="https://drive.google.com/file/d/1go0sBfp5Y8yimuth0Ya4xrYH68os-Ew7/view?usp=share_link"
             aria-label="Download"
             link
           >
